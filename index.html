@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Podcast Corpus</title>
+<meta name="description" content="Full-corpus analysis of a podcast: recurring themes, guest bench, frameworks, and how the positions changed.">
+<link rel="icon" href="assets/mlow-eye.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top">
+      <img src="assets/mlow-logo-black.png" alt="MLOW">
+      <span class="div"></span>
+      <span class="wm" id="wordmark">Blossom Research</span>
+    </a>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-panel="report" aria-selected="true">The Report</button>
+      <button class="tab" role="tab" data-panel="episodes" aria-selected="false">Episodes</button>
+      <button class="tab" role="tab" data-panel="themes" aria-selected="false">Themes</button>
+      <button class="tab" role="tab" data-panel="guests" aria-selected="false">Guests</button>
+      <button class="tab" role="tab" data-panel="about" aria-selected="false">Update</button>
+    </div>
+    <button class="icon-btn" id="theme-toggle" title="Switch between Daylight and Vault" aria-label="Switch theme">
+      <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">
+        <circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+        <path d="M8 1.4a6.6 6.6 0 0 1 0 13.2z" fill="currentColor"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">
+          <span id="hero-show">Podcast</span><span class="sep">/</span>
+          <span id="hero-range">Jun 2025 to Aug 2026</span><span class="sep">/</span>
+          <span>Full corpus analysis</span>
+        </div>
+        <h1 id="hero-title">Podcast <span class="em">Decoded</span></h1>
+        <p class="dek" id="hero-dek"></p>
+        <div class="stats" id="stats"></div>
+      </div>
+      <div>
+        <div class="cover">
+          <img src="assets/cover.jpg" alt="Show cover art" id="cover-img" width="1400" height="1400">
+          <div class="cover-cap" id="cover-cap"></div>
+        </div>
+        <div class="cover-links" id="show-links"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ REPORT ============ -->
+  <section class="panel active" id="panel-report">
+    <div class="layout">
+      <nav class="toc"><p class="toc-lbl">Contents</p><div id="toc"></div></nav>
+      <div id="report"></div>
+    </div>
+  </section>
+
+  <!-- ============ EPISODES ============ -->
+  <section class="panel" id="panel-episodes">
+    <div class="controls">
+      <input class="search" id="q" type="search" placeholder="Search titles, guests, descriptions" aria-label="Search episodes">
+      <div class="filters" id="kind-filters"></div>
+      <div class="filters" id="theme-filters"></div>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="eplist" id="eplist"></div>
+    <div id="bonus-block"></div>
+  </section>
+
+  <!-- ============ THEMES ============ -->
+  <section class="panel" id="panel-themes"><div id="themes"></div></section>
+
+  <!-- ============ GUESTS ============ -->
+  <section class="panel" id="panel-guests"><div id="guests"></div></section>
+
+  <!-- ============ UPDATE ============ -->
+  <section class="panel" id="panel-about"><div id="about"></div></section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <img class="logo" src="assets/mlow-logo-black.png" alt="MLOW">
+      <p id="foot-note"></p>
+      <p class="mono" style="font-size:11px;text-transform:uppercase;letter-spacing:.08em" id="foot-updated"></p>
+    </div>
+    <div class="foot-blossoms" aria-hidden="true">
+      <img src="assets/blossom-01.svg" alt=""><img src="assets/blossom-03.svg" alt="">
+      <img src="assets/blossom-05.svg" alt=""><img src="assets/blossom-07.svg" alt="">
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
